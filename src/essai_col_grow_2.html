@@ -1,0 +1,52 @@
+<!--  in  @tailwind base;
+@tailwind components;
+@tailwind utilities;		-->
+
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+#leftside,
+#middle,
+#rightside {
+  flex-grow: 3;
+  flex-shrink: 1;
+  width: 32%;
+  height: 100px;
+  transition: width 4s;
+}
+
+#leftside {
+  background: yellow;
+}
+
+#middle {
+  background: blue;
+}
+
+#rightside {
+  background: grey;
+}
+
+#leftside:hover,
+#middle:hover,
+#rightside:hover {
+  width: 80%;
+}
+
+
+<!--html :-->
+
+<div class="container">
+  <div id="leftside">
+    <a class="leftsidehome" href="page1.html"></a>
+  </div>
+  <div id="middle">
+    <a class="middlehome" href="page3.html"></a>
+  </div>
+  <div id="rightside">
+    <a class="rightsidehome" href="page2.html"></a>
+  </div>
+</div>

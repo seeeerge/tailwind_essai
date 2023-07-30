@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "MaShanZheng-Regular";
+    src: url("fonts/MaShanZheng-Regular.eot");
+    src: local("☺"), url("fonts/MaShanZheng-Regular.woff2") format("woff2"),
+      url("fonts/MaShanZheng-Regular.woff") format("woff"),
+      url("fonts/MaShanZheng-Regular.ttf") format("truetype"),
+      url("fonts/MaShanZheng-Regular.otf") format("otf"),
+      url("fonts/MaShanZheng-Regular.svg") format("svg");
+    size-adjust: 140%;
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+  }
+  .font-mashan {
+    font-family: "MaShanZheng-Regular";
+}
