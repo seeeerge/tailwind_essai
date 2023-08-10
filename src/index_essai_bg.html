@@ -7,78 +7,429 @@
     <title>tailwing_essai</title>
     <link rel="stylesheet" href="css/output.css">
     <!--<link rel="stylesheet2" href="css/font_style.css">  -->
-        <style> .bg-image {
-        background-image: url('fond_caracteres.png');
-        background-repeat: repeat-y;
-        background-size: cover;
-         /* Add any other background properties you want */
-    }
-    </style>
+	
+        
     <style> .bg-image_sm {
-        background-image: url('fond_caracteres_sm.png');
-        background-repeat: repeat-y;
-        background-size: cover;
-         /* Add any other background properties you want */
+        background-image: url('fond_caractères_640-1024.png');
+        background-size : cover;
+                 /* Add any other background properties you want */
+    }
+    </style>  
+	<style> .bg-image {
+        background-image: url('fond_caractères_1440-900.png');
+		background-size : cover;
+                /* Add any other background properties you want */
     }
     </style>
-     <style>
-        .custom-height {
-          height: 50vh ;       }
+    <style>
+        .custom-height-up {
+          height: 80vh ;       }
+        .custom-height-down {
+          height: 75vh ;       }
       </style>
-      <style>
-        .divshadow {
-            box-shadow: 6px 6px 0px rgb(168, 89, 89);
-        }
-        </style>
+      <style> .divshadowred_sm {
+          box-shadow: 9px 9px 4px rgb(168, 89, 89);     }
+                     .divshadowgreen_sm {
+          box-shadow: 9px 9px 4px rgb(91, 143, 89);      }
+          .divshadowblue_sm {
+          box-shadow: 9px 9px 4px rgb(103, 99, 145);
+							}
+							
+			.divshadowred {
+          box-shadow: 14px 14px 6px rgb(168, 89, 89);     }
+                     .divshadowgreen {
+          box-shadow: 14px 14px 6px rgb(91, 143, 89);      }
+          .divshadowblue {
+          box-shadow: 14px 14px 6px rgb(103, 99, 145);
+      }
+      </style>
+		<style>
+        .leftside:hover,
+        .middle:hover,
+        .rightside:hover {
+            width: 94%;
+                                    }
+        .leftside,
+        .middle,
+        .rightside {
+        flex-grow: 3;
+        flex-shrink: 5;
+        width: 32%;
+        transition: width 4s;
+					}                        
+		</style>
+	<style>
+		.pinyin1 {
+		  font-family: "pinyinok", sans-serif;
+		  font-style: unset;
+		  font-size: 1.2em;
+		  color: #d01b53;
+		  opacity: 0.6;
+		}
+		.pinyin2 {
+		  font-family: "pinyinok",  sans-serif;
+		  font-style: unset;
+		  font-size: 1.2em;
+		  color: #266f06;
+		  opacity: 0.6;
+		}
+		.pinyin3 {
+		  font-family: "pinyinok", sans-serif;
+		  font-style: unset;
+		  font-size: 1.2em;
+		  color: #1f4cba;
+		  opacity: 0.6;
+		}
+		.pinyin4 {
+		  font-family: "pinyinok", sans-serif;
+		  font-style: unset;
+		  font-size: 1.2em;
+		  color: #5d5a5a;
+		  opacity: 0.6;
+		}
+		.pinyin5 {
+		  font-family: "pinyinok", sans-serif;
+		  font-style: unset;
+		  font-size: 1.2em;
+		  color: #ded6d6;
+		  opacity: 0.6;
+		}
+		.chinese {
+			font-family: "MaShanZheng-Regular";
+			font-size: 1.1em;
+			color: #484848;
+			opacity: 0.8;
+		}
+	</style>
+	<style>
+	.pink,
+	.green,
+	.blue{
+  font-family: "Courier new", monospace;
+  font-style: unset;
+  opacity: 0;
+	}
+	</style>
+	<style>
+		.conteneur_sm {
+	  width: 100%;
+	  min-height: 100vh;
+	  overflow: hidden;
+	  }
+	  	.conteneur {
+	  width: 100%;
+	  min-height: 100vh;
+	  overflow: hidden;
+	  }
+	  </style>
+	  <style>
+			 /* tells the browser how the bar will look */
+			.colone_sm::-webkit-scrollbar {
+			  width: 2px;
+			  /*border: 2px solid blue;*/
+											  }
+	  /*tells the browser how the arrows will appear*/
+			  .colone_sm::-webkit-scrollbar-button:single-button {
+			  background-color: #fcd34d;
+			  border-radius: 4px;
+			  height: 8px;
+			  width: 2px;
+																			  }
+	  /* tells the browser how the scrollable 
+		handle would look like */
+			  .colone_sm::-webkit-scrollbar-thumb {
+			  border-radius: 8px;
+			  background: #d1d5db;
+														  }
+														  
+	  /* in conteneur */
+			  .colone::-webkit-scrollbar-track {
+			  background: #949494;
+												   }
+		/* tells the browser how the bar will look */
+			.colone::-webkit-scrollbar {
+			  width: 4px;
+			  /*border: 2px solid blue;*/
+											  }
+	  /*tells the browser how the arrows will appear*/
+			  .colone::-webkit-scrollbar-button:single-button {
+			  background-color: #fcd34d;
+			  border-radius: 8px;
+			  height: 8px;
+			  width: 4px;
+																			  }
+	  /* tells the browser how the scrollable 
+		handle would look like */
+			  .colone::-webkit-scrollbar-thumb {
+			  border-radius: 4px;
+			  background: #d1d5db;
+														  }
+	  /* tells the browser how will the 
+	   path of the handle will look like */
+			  .colone::-webkit-scrollbar-track {
+			  background: #949494;
+												   }
+		</style>
+		<style>
+		.button_to_welcome_sm,
+		.button_vers_bienvenue_sm {
+			font-family: "Courier new", monospace;
+			background-color: rgb(230, 240, 93);
+			display: block;
+			width: 70%;
+			margin-left: auto;
+			margin-right: 2px; 
+				}
+		.button_đến_hoan_nghênh_sm{
+			font-family: "Courier new", monospace;
+			background-color: rgb(230, 240, 93);
+			display: block;
+			width: 76%;
+			margin-left: auto;
+			margin-right: 2px; 
+				}
+		.button_to_welcome,
+		.button_vers_bienvenue,
+		.button_đến_hoan_nghênh{
+			font-family: "Courier new", monospace;
+			background-color: rgb(230, 240, 93);
+			display: block;
+			width:44%;
+			margin-left: auto;
+			margin-right: 2px; 
+				}
+		.bt1, 
+		.bt2,
+		.bt3{
+		  font-weight: bolder;
+		  animation: Test 1s infinite;
+			}
+		@keyframes Test {
+		  0% {
+			opacity: 1;
+				}
+		  50% {
+			opacity: 0;
+				}
+		  100% {
+			opacity: 1;
+					}
+			}
+		</style>
+		
+   </head>
 
-</head>
-
-<body >
-     <div class="flex flex-col h-screen items-center sm:hidden bg-image_sm bg-cover bg-repeat-y "> <!-- mobiles only -->
-        <div class="font-mashan text-shadow text-center text-6xl  mt-6 mb-6">打有 字汇</div>
-            <div class="h-screen flex ">
-    <div class="custom-height divshadow font-Helvetica font-semibold p-2  bg-red ml-6 mr-2">
-        The Chinese characters seem very complicated to all those who have not yet faced them. It is said that they have a logic, a structure, that they have been classified by key, from 540 in the   说文解字 shuöwén jiêzì   to 214 since the   字汇 zìhuì, that most of them are pictophonetic …
-Does that make them more understandable? more effortless?
-The purpose of this html page is precisely to allow a course that is not explanatory or exhaustive, but rather demonstrative. A pictorial overview is more effective than a long explanation, using new technologies, we can fly over the character 方 fäng and guess its phonetic use in the characters   放，房，防，访，纺，仿，芳，妨，坊.
-We can see the large number of characters which use 口 kôu, as radical or not, the key characters which are used to build only one or very few characters, and lots of details that shed light on how these characters are constructed and organized.
-.</div>
-    <div class="custom-height divshadow font-Arial font-semibold p-2 bg-green ml-2 mr-2">
-        Les caractères Chinois semblent bien compliqués à tous ceux qui n’y ont pas encore été confrontés. Il est dit qu’ils ont une logique, une structure, qu’ils ont été classés par clé, de 540 dans le   说文解字 shuöwén jiêzì   à 214 depuis le   字汇 zìhuì, que la plupart sont des idéo-phonogrammes …
-        Est-ce que cela les rend plus compréhensibles ? plus abordables ?
-        Le but de cette page html est justement de permettre un parcours non pas explicatif, ni exhaustif, mais plutôt démonstratif. Un survol imagé étant plus efficace qu’une longue explication, à l’aide des nouvelles technologies, on peut survoler le caractère 方 fäng et deviner son utilisation phonétique dans les caractères   放，房，防，访，纺，仿，芳，妨，坊.
-        On peut voir le grand nombre nombre de caractères qui utilisent 口 kôu, comme radical ou non, les caractères clés qui ne servent à construire qu’un ou très peu de caractères, et plein de détails qui éclairent la façon dont ces caractères sont construits et organisés.
-        .
-    </div>
-    <div class="custom-height font-Lobster p-2 bg-blue ml-2 mr-6">
-        Các ký tự Trung Quốc có vẻ rất phức tạp đối với tất cả những người chưa đối mặt với chúng. Người ta nói rằng chúng có một logic, một cấu trúc, và chúng đã được phân loại theo bộ thủ, từ 540 trong   说文解字 shuöwén jiêzì   đến 214 vào trong   字汇 zìhuì, rằng hầu hết trong số họ là hình ảnh và ngữ âm ký tự ...
-Điều đó có làm cho họ dễ hiểu hơn không? dễ dàng hơn?
-Mục đích của trang html này chính xác là để cho phép một quá trình học tập không giải thích hoặc thấu đáo, mà có minh họa. Một tổng quan về hình ảnh có hiệu quả hơn một lời giải thích dài, sử dụng các công nghệ mới, chúng ta có thể bay qua nhân vật Trung Quốc 方 fäng và xem cách sử dụng ngữ âm của nó trong các k tự   放，房，防，访，纺，仿，芳，妨，坊.
-Chúng ta có thể thấy số lượng lớn các ký tự Trung Quốc sử dụng 口 kôu, mặc dù là bộ thủ hay không, các bộ thủ mà chỉ được sử dụng để xây dựng một hoặc rất ít ký tự, và rất nhiều chi tiết làm sáng tỏ cách thức các ký tự Trung Quốc này được xây dựng và tổ chức.</div>
-</div>
-    </div>
-<div class="hidden sm:flex flex-col h-screen items-center bg-image ">  <!--  larger_screens_only -->
-            <div class="font-mashan text-shadow text-center text-7xl  mt-8 mb-8">打有 字汇</div>
-                    <div class="h-92 flex">
-        <div class="font-Helvetica font-semibold p-5  bg-red ml-8 mr-3">
-            The Chinese characters seem very complicated to all those who have not yet faced them. It is said that they have a logic, a structure, that they have been classified by key, from 540 in the   说文解字 shuöwén jiêzì   to 214 since the   字汇 zìhuì, that most of them are pictophonetic …
-Does that make them more understandable? more effortless?
-The purpose of this html page is precisely to allow a course that is not explanatory or exhaustive, but rather demonstrative. A pictorial overview is more effective than a long explanation, using new technologies, we can fly over the character 方 fäng and guess its phonetic use in the characters   放，房，防，访，纺，仿，芳，妨，坊.
-We can see the large number of characters which use 口 kôu, as radical or not, the key characters which are used to build only one or very few characters, and lots of details that shed light on how these characters are constructed and organized.
-.</div>
-    <div class="font-Arial font-semibold p-5 bg-green ml-3 mr-3">
-        Les caractères Chinois semblent bien compliqués à tous ceux qui n’y ont pas encore été confrontés. Il est dit qu’ils ont une logique, une structure, qu’ils ont été classés par clé, de 540 dans le   说文解字 shuöwén jiêzì   à 214 depuis le   字汇 zìhuì, que la plupart sont des idéo-phonogrammes …
-Est-ce que cela les rend plus compréhensibles ? plus abordables ?
-Le but de cette page html est justement de permettre un parcours non pas explicatif, ni exhaustif, mais plutôt démonstratif. Un survol imagé étant plus efficace qu’une longue explication, à l’aide des nouvelles technologies, on peut survoler le caractère 方 fäng et deviner son utilisation phonétique dans les caractères   放，房，防，访，纺，仿，芳，妨，坊.
-On peut voir le grand nombre nombre de caractères qui utilisent 口 kôu, comme radical ou non, les caractères clés qui ne servent à construire qu’un ou très peu de caractères, et plein de détails qui éclairent la façon dont ces caractères sont construits et organisés.
-.
-    </div>
-    <div class="font-Lobster p-5 bg-blue ml-3 mr-8">
-        Các ký tự Trung Quốc có vẻ rất phức tạp đối với tất cả những người chưa đối mặt với chúng. Người ta nói rằng chúng có một logic, một cấu trúc, và chúng đã được phân loại theo bộ thủ, từ 540 trong   说文解字 shuöwén jiêzì   đến 214 vào trong   字汇 zìhuì, rằng hầu hết trong số họ là hình ảnh và ngữ âm ký tự ...
-Điều đó có làm cho họ dễ hiểu hơn không? dễ dàng hơn?
-Mục đích của trang html này chính xác là để cho phép một quá trình học tập không giải thích hoặc thấu đáo, mà có minh họa. Một tổng quan về hình ảnh có hiệu quả hơn một lời giải thích dài, sử dụng các công nghệ mới, chúng ta có thể bay qua nhân vật Trung Quốc 方 fäng và xem cách sử dụng ngữ âm của nó trong các k tự   放，房，防，访，纺，仿，芳，妨，坊.
-Chúng ta có thể thấy số lượng lớn các ký tự Trung Quốc sử dụng 口 kôu, mặc dù là bộ thủ hay không, các bộ thủ mà chỉ được sử dụng để xây dựng một hoặc rất ít ký tự, và rất nhiều chi tiết làm sáng tỏ cách thức các ký tự Trung Quốc này được xây dựng và tổ chức.</div>
-</div>
+  <body>
+     <div class="conteneur_sm flex flex-col h-screen items-center sm:hidden bg-image_sm bg-no-repeat"> <!-- mobiles only -->
+        <div class="font-mashan text-shadow_sm text-center text-6xl  mt-6 mb-6">打有 字汇</div>
+            <div class=" custom-height-up flex">
+                    <div class="leftside:hover leftside custom-height-up font-Helvetica font-semibold colone_sm overflow-y-auto overflow-x-hidden p-2    
+					bg-red ml-8 mr-1 divshadowred_sm rounded-md ">
+						The Chinese characters seem very complicated to all those who have not yet
+					  faced them. It is said that they have a logic, a structure, that they have
+					  been classified by key, from 540 in the <span class="chinese"> 说文解字</span>
+					  <span class="pinyin1">shuö</span><span class="pinyin2">wén</span
+					  ><span class="pinyin3">jiê</span><span class="pinyin4">zì</span> to 214
+					  since the <span class="chinese"> 字汇</span> <span class="pinyin4">zìhuì</span>, that most of them are
+					  pictophonetic…<br />
+					  Does that make them more understandable? more effortless?<br />
+					  The purpose of this html page is precisely to allow a course that is not
+					  explanatory or exhaustive, but rather demonstrative. A pictorial overview
+					  is more effective than a long explanation, using new technologies, we can
+					  fly over the character <span class="chinese"> 方</span> <span class="pinyin1">fäng</span> and guess its
+					  phonetic use in the characters <span class="chinese"> 放，房，防，访，纺，仿，芳，妨，坊</span>.<br />
+					  We can see the large number of characters which use <span class="chinese"> 口</span>
+					  <span class="pinyin3">kôu</span>, as radical or not. We can also remark the key characters
+					  which are used to build only one or very few characters, and lots of
+					  details that shed light on how these characters are constructed and
+					  organized.<br />
+						<span class="pink">. </span>
+								<button class="button_to_welcome_sm mt-2 p-2 text-left rounded-md">
+								Go forward in <br />English
+								<span class="bt1"
+								  ><a
+									title="New tab"
+									href="http://xn--spuu8h.com/EN/en_login.php"
+									onclick="this.target='_blank'"
+									>&nbsp;&nbsp;>>> <br/></a
+								  ></span>
+							  </button>
+					</div>
+                    <div class="middle:hover middle custom-height-up font-Arial font-semibold colone_sm overflow-y-auto overflow-x-hidden p-2 
+					bg-green ml-8 mr-8 divshadowgreen_sm rounded-md">
+						Les caractères Chinois semblent bien compliqués à tous ceux qui n’y ont
+					  pas encore été confrontés. Il est dit qu’ils ont une logique, une
+					  structure, qu’ils ont été classés par clé, de 540 dans le <span class="chinese"> 说文解字</span>
+					  <span class="pinyin1">shuö</span><span class="pinyin2">wén</span
+					  ><span class="pinyin3">jiê</span><span class="pinyin4">zì</span>
+					  à 214 depuis le <span class="chinese"> 字汇</span>
+					  <span class="pinyin4"> zìhuì</span>, que la plupart sont des
+					  idéo-phonogrammes… <br />
+					  Est-ce que cela les rend plus compréhensibles ? plus abordables ?<br />
+					  Le but de cette page html est justement de permettre un parcours non pas
+					  explicatif, ni exhaustif, mais plutôt démonstratif. Un survol imagé étant
+					  plus efficace qu’une longue explication, à l’aide des nouvelles
+					  technologies, on peut survoler le caractère <span class="chinese"> 方</span>
+					  <span class="pinyin1">fäng</span> et deviner son utilisation phonétique
+					  dans les caractères <span class="chinese"> 放，房，防，访，纺，仿，芳，妨，坊</span>.<br />
+					  On peut voir le grand nombre nombre de caractères qui utilisent <span class="chinese"> 口</span>
+					  <span class="pinyin3">kôu</span>, comme radical ou non. On peut aussi remarquer les caractères
+					  clés qui ne servent à construire qu’un ou très peu de caractères, et plein
+					  de détails qui éclairent la façon dont ces caractères sont construits et
+					  organisés.<br />
+					  <span class="green">. </span>
+							<button class="button_vers_bienvenue_sm mt-2 p-2 text-left rounded-md">
+								Continuer en <br />Français
+								<span class="bt2"
+								><a
+									title="New tab"
+									href="http://xn--spuu8h.com/FR/fr_login.php"
+									onclick="this.target='_blank'"
+									>&nbsp;>>> <br/></a
+								></span>
+							</button>
+					</div>
+                    <div class="rightside:hover rightside custom-height-up font-Lobster colone_sm overflow-y-auto overflow-x-hidden p-2 
+					bg-blue ml-1 mr-8 divshadowblue_sm rounded-md">
+						Các ký tự Trung Quốc có vẻ rất phức tạp đối với tất cả những người chưa
+					  phải đối mặt với chúng. Người ta nói rằng họ có một logic, một cấu trúc,
+					  mà họ đã được phân loại theo khóa, từ 540 trong <span class="chinese"> 说文解字</span>
+					  <span class="pinyin1">shuö</span><span class="pinyin2">wén</span
+					  ><span class="pinyin3">jiê</span><span class="pinyin4">zì</span>
+					  đến 214 kể từ <span class="chinese"> 字汇</span>
+					  <span class="pinyin4">zìhuì</span>, rằng hầu hết trong số họ là hình ảnh
+					  và ngữ âm ký tự... <br />
+					  Điều đó làm cho họ dễ hiểu hơn? Giá cả phải chăng hơn?<br />
+					  Mục đích của trang html này chỉ là để cho phép một cái nhìn nhanh chóng,
+					  một cái nhìn tổng quan, không phải là giải thích hoặc đầy đủ, mà là trình
+					  diễn. Một tổng quan về hình ảnh có hiệu quả hơn một lời giải thích dài, sử
+					  dụng các công nghệ mới, chúng ta có thể bay qua ký tự Trung Quốc <span class="chinese"> 方</span>
+					  <span class="pinyin1">fäng</span> và xem cách sử dụng ngữ âm của nó trong
+					  các k tự <span class="chinese"> 放，房，防，访，纺，仿，芳，妨，坊</span>.<br />
+					  Chúng ta có thể thấy số lượng lớn các ký tự Trung Quốc sử dụng <span class="chinese"> 口</span>
+					  <span class="pinyin3">kôu</span>, là cấp tiến hoặc không. Chúng ta cũng có thể để ý các ký tự chính
+					  được sử dụng để xây dựng chỉ một hoặc rất ít ký tự, và rất nhiều chi tiết
+					  làm sáng tỏ cách thức các ký tự Trung Quốc này được xây dựng và tổ
+					  chức.<br />
+					  <span class="blue">. </span>
+									<button class="button_đến_hoan_nghênh_sm mt-2 p-2 text-left rounded-md">
+										Đi tiếp bằng <br />Tiếng Việt
+										<span class="bt3"
+										><a
+											title="New tab"
+											href="http://xn--spuu8h.com/VN/vn_login.php"
+											onclick="this.target='_blank'"
+											>&nbsp;>>> <br/></a
+										></span>
+									</button>		
+					</div>
+        		</div>
+     </div>   
+		
+				<div class="conteneur hidden sm:flex flex-col h-screen items-center bg-image bg-repeat">  <!--  larger_screens_only -->
+            <div class="font-mashan text-shadow_wide text-center text-7xl  mt-8 mb-8">打有 字汇</div>
+                    <div class="custom-height-down flex">
+        <div class="leftside:hover leftside custom-height-down font-Helvetica font-semibold colone overflow-y-auto overflow-x-hidden p-5  
+		bg-red ml-12 mr-4 divshadowred rounded-lg">
+					The Chinese characters seem very complicated to all those who have not yet
+					  faced them. It is said that they have a logic, a structure, that they have
+					  been classified by key, from 540 in the <span class="chinese"> 说文解字</span> 
+					  <span class="pinyin1">shuö</span><span class="pinyin2">wén</span
+					  ><span class="pinyin3">jiê</span><span class="pinyin4">zì</span> to 214
+					  since the <span class="chinese"> 字汇</span> <span class="pinyin4">zìhuì</span>, that most of them are
+					  pictophonetic…<br />
+					  Does that make them more understandable? more effortless?<br />
+					  The purpose of this html page is precisely to allow a course that is not
+					  explanatory or exhaustive, but rather demonstrative. A pictorial overview
+					  is more effective than a long explanation, using new technologies, we can
+					  fly over the character <span class="chinese"> 方</span> <span class="pinyin1">fäng</span> and guess its
+					  phonetic use in the characters <span class="chinese"> 放，房，防，访，纺，仿，芳，妨，坊</span>.<br />
+					  We can see the large number of characters which use <span class="chinese"> 口</span>
+					  <span class="pinyin3">kôu</span>, as radical or not. We can also remark the key characters
+					  which are used to build only one or very few characters, and lots of
+					  details that shed light on how these characters are constructed and
+					  organized.<br />
+					  <span class="pink">. </span>
+									<button class="button_to_welcome mt-2 p-2 text-left rounded-md">
+										Go forward in <br />English
+										<span class="bt1"
+										><a
+											title="New tab"
+											href="http://xn--spuu8h.com/EN/en_login.php"
+											onclick="this.target='_blank'"
+											>&nbsp;&nbsp;>>> <br/></a
+										></span	>
+									</button>
+					</div>
+		<div class="middle:hover middle custom-height-down font-Arial font-semibold colone overflow-y-auto overflow-x-hidden p-5 
+		bg-green ml-8 mr-8 divshadowgreen rounded-lg">
+					Les caractères Chinois semblent bien compliqués à tous ceux qui n’y ont
+					  pas encore été confrontés. Il est dit qu’ils ont une logique, une
+					  structure, qu’ils ont été classés par clé, de 540 dans le <span class="chinese"> 说文解字</span>
+					  <span class="pinyin1">shuö</span><span class="pinyin2">wén</span
+					  ><span class="pinyin3">jiê</span><span class="pinyin4">zì</span>
+					  à 214 depuis le <span class="chinese"> 字汇</span>
+					  <span class="pinyin4"> zìhuì</span>, que la plupart sont des
+					  idéo-phonogrammes… <br />
+					  Est-ce que cela les rend plus compréhensibles ? plus abordables ?<br />
+					  Le but de cette page html est justement de permettre un parcours non pas
+					  explicatif, ni exhaustif, mais plutôt démonstratif. Un survol imagé étant
+					  plus efficace qu’une longue explication, à l’aide des nouvelles
+					  technologies, on peut survoler le caractère <span class="chinese"> 方</span>
+					  <span class="pinyin1">fäng</span> et deviner son utilisation phonétique
+					  dans les caractères <span class="chinese"> 放，房，防，访，纺，仿，芳，妨，坊</span>.<br />
+					  On peut voir le grand nombre nombre de caractères qui utilisent <span class="chinese"> 口</span>
+					  <span class="pinyin3">kôu</span>, comme radical ou non. On peut aussi remarquer les caractères
+					  clés qui ne servent à construire qu’un ou très peu de caractères, et plein
+					  de détails qui éclairent la façon dont ces caractères sont construits et
+					  organisés.<br />
+					  <span class="green">. </span>
+								<button class="button_vers_bienvenue mt-2 p-2 text-left rounded-md">
+									Continuer en <br />Français
+									<span class="bt2"
+									><a
+										title="New tab"
+										href="http://xn--spuu8h.com/FR/fr_login.php"
+										onclick="this.target='_blank'"
+										>&nbsp;&nbsp;>>> <br/></a
+									></span>
+								</button>
+					</div>
+		<div class="rightside:hover rightside custom-height-down font-Lobster colone overflow-y-auto overflow-x-hidden p-5 
+		bg-blue ml-4 mr-12 divshadowblue rounded-lg">
+					Các ký tự Trung Quốc có vẻ rất phức tạp đối với tất cả những người chưa
+					  phải đối mặt với chúng. Người ta nói rằng họ có một logic, một cấu trúc,
+					  mà họ đã được phân loại theo khóa, từ 540 trong <span class="chinese"> 说文解字</span>
+					  <span class="pinyin1">shuö</span><span class="pinyin2">wén</span
+					  ><span class="pinyin3">jiê</span><span class="pinyin4">zì</span>
+					  đến 214 kể từ <span class="chinese"> 字汇</span>
+					  <span class="pinyin4">zìhuì</span>, rằng hầu hết trong số họ là hình ảnh
+					  và ngữ âm ký tự... <br />
+					  Điều đó làm cho họ dễ hiểu hơn? Giá cả phải chăng hơn?<br />
+					  Mục đích của trang html này chỉ là để cho phép một cái nhìn nhanh chóng,
+					  một cái nhìn tổng quan, không phải là giải thích hoặc đầy đủ, mà là trình
+					  diễn. Một tổng quan về hình ảnh có hiệu quả hơn một lời giải thích dài, sử
+					  dụng các công nghệ mới, chúng ta có thể bay qua ký tự Trung Quốc <span class="chinese"> 方</span>
+					  <span class="pinyin1">fäng</span> và xem cách sử dụng ngữ âm của nó trong
+					  các k tự <span class="chinese"> 放，房，防，访，纺，仿，芳，妨，坊</span>.<br />
+					  Chúng ta có thể thấy số lượng lớn các ký tự Trung Quốc sử dụng <span class="chinese"> 口</span>
+					  <span class="pinyin3">kôu</span>, là cấp tiến hoặc không. Chúng ta cũng có thể để ý các ký tự chính
+					  được sử dụng để xây dựng chỉ một hoặc rất ít ký tự, và rất nhiều chi tiết
+					  làm sáng tỏ cách thức các ký tự Trung Quốc này được xây dựng và tổ
+					  chức.<br />
+					  <span class="blue">. </span>
+								<button class="button_đến_hoan_nghênh mt-2 p-2 text-left rounded-md">
+										Đi tiếp bằng <br />Tiếng Việt
+									<span class="bt3"
+									><a
+										title="New tab"
+										href="http://xn--spuu8h.com/VN/vn_login.php"
+										onclick="this.target='_blank'"
+										>&nbsp;>>> <br/></a
+									></span	>
+								</button>
+					</div>
+			</div>
     </div>
 
 </body>
